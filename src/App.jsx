@@ -241,16 +241,20 @@ function Detail({ product, onAdd, onClose }) {
 export default function App() {
   const [activeCat, setActiveCat] = useState("All");
   const [activeLine, setActiveLine] = useState("All");
+  const [search, setSearch] = useState("");
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [detail, setDetail] = useState(null);
   const [toast, setToast] = useState(null);
 
-  const filtered = useMemo(() =>
-    PRODUCTS.filter(p =>
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase().trim();
+    return PRODUCTS.filter(p =>
       (activeCat === "All" || p.cat === activeCat) &&
-      (activeLine === "All" || p.line === activeLine)
-    ), [activeCat, activeLine]);
+      (activeLine === "All" || p.line === activeLine) &&
+      (!q || p.name.toLowerCase().includes(q) || p.sub.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q) || p.line.toLowerCase().includes(q))
+    );
+  }, [activeCat, activeLine, search]);
 
   const cartCount = cart.reduce((s, i) => s + i.qty, 0);
 
@@ -270,6 +274,21 @@ export default function App() {
         <div>
           <h1 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 22, fontWeight: 500, color: C.char, letterSpacing: 1 }}>FLOWE COLLECTIVE</h1>
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 9, letterSpacing: 2.5, textTransform: "uppercase", color: C.gold, marginTop: 1 }}>Shop</p>
+        </div>
+        <div style={{ flex: "0 1 320px" }}>
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Search products..."
+            style={{
+              width: "100%", padding: "9px 14px", border: `1px solid ${C.ln}`, background: C.warm,
+              fontFamily: "'Outfit',sans-serif", fontSize: 12, color: C.char, outline: "none",
+              borderRadius: 0, transition: "border-color .2s",
+            }}
+            onFocus={e => e.target.style.borderColor = C.gold}
+            onBlur={e => e.target.style.borderColor = C.ln}
+          />
         </div>
         <button onClick={() => setCartOpen(true)} style={{
           background: "none", border: "none", cursor: "pointer", fontFamily: "'Outfit',sans-serif",
