@@ -275,21 +275,6 @@ export default function App() {
           <h1 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 22, fontWeight: 500, color: C.char, letterSpacing: 1 }}>FLOWE COLLECTIVE</h1>
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 9, letterSpacing: 2.5, textTransform: "uppercase", color: C.gold, marginTop: 1 }}>Shop</p>
         </div>
-        <div style={{ flex: "0 1 320px" }}>
-          <input
-            type="text"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search products..."
-            style={{
-              width: "100%", padding: "9px 14px", border: `1px solid ${C.ln}`, background: C.warm,
-              fontFamily: "'Outfit',sans-serif", fontSize: 12, color: C.char, outline: "none",
-              borderRadius: 0, transition: "border-color .2s",
-            }}
-            onFocus={e => e.target.style.borderColor = C.gold}
-            onBlur={e => e.target.style.borderColor = C.ln}
-          />
-        </div>
         <button onClick={() => setCartOpen(true)} style={{
           background: "none", border: "none", cursor: "pointer", fontFamily: "'Outfit',sans-serif",
           fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", color: C.char, display: "flex", alignItems: "center", gap: 7,
@@ -335,6 +320,41 @@ export default function App() {
           }}>{c}</button>
         ))}
       </nav>
+
+      {/* Search */}
+      <div style={{ display: "flex", justifyContent: "center", padding: "0 32px 24px" }}>
+        <div style={{ position: "relative", width: "100%", maxWidth: 420 }}>
+          <span style={{
+            position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)",
+            color: C.mut, fontSize: 14, pointerEvents: "none",
+          }}>&#9906;</span>
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Search products..."
+            style={{
+              width: "100%", padding: "11px 16px 11px 38px",
+              border: `1px solid ${C.ln}`, background: C.wh,
+              fontFamily: "'Outfit',sans-serif", fontSize: 13, color: C.char,
+              outline: "none", borderRadius: 0, transition: "border-color .2s ease, box-shadow .2s ease",
+              letterSpacing: 0.3,
+            }}
+            onFocus={e => { e.target.style.borderColor = C.gold; e.target.style.boxShadow = `0 0 0 3px ${C.gold}22`; }}
+            onBlur={e => { e.target.style.borderColor = C.ln; e.target.style.boxShadow = "none"; }}
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              style={{
+                position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)",
+                background: "none", border: "none", cursor: "pointer", color: C.mut, fontSize: 14,
+                padding: 4, lineHeight: 1,
+              }}
+            >✕</button>
+          )}
+        </div>
+      </div>
 
       <p style={{ textAlign: "center", fontFamily: "'Outfit',sans-serif", fontSize: 11, color: C.mut, marginBottom: 20 }}>
         {filtered.length} product{filtered.length !== 1 ? "s" : ""}
