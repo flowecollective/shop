@@ -1,0 +1,78 @@
+const CDN_P = "https://www.randco.com/cdn/shop/products/";
+const CDN_F = "https://www.randco.com/cdn/shop/files/";
+
+export const PRODUCTS = [
+  // ── R+Co Shampoo ──
+  { id: 1, line: "R+Co", name: "TELEVISION", sub: "Perfect Hair Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 38, badge: "Best Seller", img: CDN_P+"R_Co_WebAssets2021_TELEVISION-Perfect-Hair-Shampoo_340x340.png?v=1762442041" },
+  { id: 2, line: "R+Co", name: "DALLAS", sub: "Biotin Thickening Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 38, badge: "Best Seller", img: CDN_P+"R_Co_WebAssets2021_DALLAS-Biotin-Thickening-Shampoo_340x340.png?v=1762441925" },
+  { id: 3, line: "R+Co", name: "ATLANTIS", sub: "Moisturizing B5 Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_ATLANTIS_340x340.png?v=1762441902" },
+  { id: 4, line: "R+Co", name: "GEMSTONE", sub: "Color Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_GEMSTONE-Color-Shampoo_340x340.png?v=1762441972" },
+  { id: 5, line: "R+Co", name: "BEL AIR", sub: "Smoothing Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_BEL-AIR_340x340.png?v=1762441909" },
+  { id: 6, line: "R+Co", name: "CASSETTE", sub: "Curl Shampoo", cat: "Shampoo", sz: "6 oz", price: 36, badge: "", img: CDN_P+"R_Co_WebAssets2021_CASSETTE_340x340.png?v=1762441916" },
+  { id: 7, line: "R+Co", name: "OBLIVION", sub: "Clarifying Shampoo", cat: "Shampoo", sz: "6 oz", price: 36, badge: "", img: CDN_P+"R_Co_NewWebAssets-OBLIVION_340x340.png?v=1762442086" },
+  // ── R+Co Conditioner ──
+  { id: 10, line: "R+Co", name: "TELEVISION", sub: "Perfect Hair Conditioner", cat: "Conditioner", sz: "8.5 oz", price: 38, badge: "Best Seller", img: CDN_P+"R_Co_WebAssets2021_TELEVISION-Perfect-Hair-Conditioner_340x340.png?v=1762441953" },
+  { id: 11, line: "R+Co", name: "DALLAS", sub: "Biotin Thickening Conditioner", cat: "Conditioner", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_DALLAS-Biotin-Thickening-Conditioner_340x340.png?v=1762441918" },
+  { id: 12, line: "R+Co", name: "ATLANTIS", sub: "Moisturizing B5 Conditioner", cat: "Conditioner", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_ATLANTIS-Conditioner_340x340.png?v=1762441895" },
+  { id: 13, line: "R+Co", name: "GEMSTONE", sub: "Color Conditioner", cat: "Conditioner", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_GEMSTONE-Color-Conditioner_340x340.png?v=1762441965" },
+  { id: 14, line: "R+Co", name: "BEL AIR", sub: "Smoothing Conditioner", cat: "Conditioner", sz: "8.5 oz", price: 38, badge: "", img: CDN_P+"R_Co_WebAssets2021_BEL-AIR-Conditioner_340x340.png?v=1762441904" },
+  { id: 15, line: "R+Co", name: "CASSETTE", sub: "Curl Conditioner", cat: "Conditioner", sz: "6 oz", price: 36, badge: "", img: CDN_P+"R_Co_WebAssets2021_CASSETTE-Conditioner_340x340.png?v=1762441913" },
+  // ── R+Co Styling ──
+  { id: 20, line: "R+Co", name: "DART", sub: "Pomade Stick", cat: "Styling", sz: "0.5 oz", price: 25, badge: "Best Seller", img: CDN_P+"R_Co_WebAssets2021_DART-Pomade-Stick_340x340.png?v=1762441963" },
+  { id: 21, line: "R+Co", name: "OUTER SPACE", sub: "Flexible Hairspray", cat: "Styling", sz: "9.5 oz", price: 37, badge: "Best Seller", img: CDN_P+"OUTERSPACE_FlexibleHairspray_340x340.png?v=1762442094" },
+  { id: 22, line: "R+Co", name: "BADLANDS", sub: "Dry Shampoo Paste", cat: "Styling", sz: "2.2 oz", price: 34, badge: "Best Seller", img: CDN_P+"R_Co_WebAssets2021_BADLANDS_340x340.png?v=1762442057" },
+  { id: 23, line: "R+Co", name: "COOL WIND", sub: "pH Perfect Air Dry Crème", cat: "Styling", sz: "5 oz", price: 36, badge: "Best Seller", img: CDN_P+"R_Co_NewWebAssets-COOL-WIND_340x340.png?v=1762441985" },
+  { id: 24, line: "R+Co", name: "CANDY STRIPE", sub: "Protect + Prep Detangling Spray", cat: "Styling", sz: "8.5 oz", price: 34, badge: "Award Winner", img: CDN_F+"CANDY-STRIPE_Protect_Prep_WebAsset_v02.22_340x340.png?v=1762442424" },
+  { id: 25, line: "R+Co", name: "DEATH VALLEY", sub: "Dry Shampoo", cat: "Styling", sz: "6.3 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_DEATH-VALLEY-Dry-Shampoo_340x340.png?v=1762441940" },
+  { id: 26, line: "R+Co", name: "ON A CLOUD", sub: "Bond Building Repair + Styling Oil", cat: "Styling", sz: "2 oz", price: 38, badge: "New", img: CDN_F+"R_Co_On-A-Cloud-Bond-Building-Repair-Styling-Oil_web_340x340.png?v=1753302949" },
+  { id: 27, line: "R+Co", name: "SUN CATCHER", sub: "Power C Nourish + Refresh Styling Spray", cat: "Styling", sz: "6 oz", price: 36, badge: "New", img: CDN_F+"SUNCATCHERPOWERCNourish_RefreshStylingSpray_Web_705x1800_1_340x340.png?v=1762442612" },
+  { id: 28, line: "R+Co", name: "TROPHY", sub: "Shine + Texture Spray", cat: "Styling", sz: "6 oz", price: 34, badge: "", img: CDN_P+"R_Co_NewWebAssets-TROPHY_340x340.png?v=1762442145" },
+  { id: 29, line: "R+Co", name: "ROCKAWAY", sub: "Salt Spray", cat: "Styling", sz: "4.2 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_ROCKAWAY_340x340.png?v=1762442104" },
+  { id: 30, line: "R+Co", name: "MANNEQUIN", sub: "Styling Paste", cat: "Styling", sz: "2.5 oz", price: 32, badge: "", img: CDN_P+"R_Co_WebAssets2021_MANNEQUIN_340x340.png?v=1762442024" },
+  { id: 31, line: "R+Co", name: "HIGH DIVE", sub: "Moisture + Shine Crème", cat: "Styling", sz: "5 oz", price: 36, badge: "", img: CDN_P+"R_Co_WebAssets2021_HIGH-DIVE_340x340.png?v=1762441999" },
+  { id: 32, line: "R+Co", name: "VICIOUS", sub: "Strong Hold Flexible Hairspray", cat: "Styling", sz: "9.5 oz", price: 37, badge: "", img: CDN_P+"R_Co_WebAssets2021_VICIOUS_340x340.png?v=1762442154" },
+  { id: 33, line: "R+Co", name: "TWISTER", sub: "Curl Primer", cat: "Styling", sz: "5 oz", price: 34, badge: "", img: CDN_P+"R_Co_NewWebAssets-TWISTER_340x340.png?v=1762442150" },
+  { id: 34, line: "R+Co", name: "PARK AVE", sub: "Blow Out Balm", cat: "Styling", sz: "5 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_PARK-AVE_340x340.png?v=1762442098" },
+  { id: 35, line: "R+Co", name: "FOIL", sub: "Frizz + Static Control Spray", cat: "Styling", sz: "5 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_FOIL_340x340.png?v=1762441958" },
+  { id: 36, line: "R+Co", name: "DALLAS", sub: "Thickening Spray", cat: "Styling", sz: "6.7 oz", price: 32, badge: "", img: CDN_P+"R_Co_WebAssets2021_DALLAS-Thickening-Spray_340x340.png?v=1762441934" },
+  { id: 37, line: "R+Co", name: "CONTINENTAL", sub: "Glossing Wax", cat: "Styling", sz: "2.2 oz", price: 32, badge: "", img: CDN_P+"R_Co_WebAssets2021_CONTINENTAL_340x340.png?v=1762441978" },
+  { id: 38, line: "R+Co", name: "GRID", sub: "Structural Hold Setting Spray", cat: "Styling", sz: "5 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_GRID_340x340.png?v=1762441992" },
+  { id: 39, line: "R+Co", name: "RODEO STAR", sub: "Thickening Style Foam", cat: "Styling", sz: "5 oz", price: 34, badge: "", img: CDN_P+"R_Co_WebAssets2021_RODEO-STAR_340x340.png?v=1762442100" },
+  { id: 40, line: "R+Co", name: "CENTERPIECE", sub: "All-In-One Elixir Spray", cat: "Styling", sz: "5.2 oz", price: 36, badge: "", img: CDN_P+"R_Co_NewWebAssets-CENTERPIECE_340x340.png?v=1762441919" },
+  { id: 41, line: "R+Co", name: "BRIGHT SHADOWS", sub: "Root Touch-Up Spray", cat: "Styling", sz: "1.5 oz", price: 28, badge: "", img: CDN_P+"R_Co_NewWebAssets-BRIGHT-SHADOWS_340x340.png?v=1762442066" },
+  // ── R+Co Treatment ──
+  { id: 50, line: "R+Co", name: "TELEVISION", sub: "Perfect Hair Masque", cat: "Treatment", sz: "5 oz", price: 45, badge: "", img: CDN_P+"R_Co_WebAssets2021_TELEVISION-Masque_340x340.png?v=1762442048" },
+  { id: 51, line: "R+Co", name: "CRYSTAL HALO", sub: "Balancing Scalp Scrub + Shampoo", cat: "Treatment", sz: "3 oz", price: 38, badge: "", img: CDN_P+"R_Co_NewWebAssets-CRYSTAL-HALO_340x340.png?v=1762441937" },
+  { id: 52, line: "R+Co", name: "HYDROPLANE", sub: "Water-Activated Volumizing Compound", cat: "Treatment", sz: "5 oz", price: 36, badge: "", img: CDN_P+"R_Co_NewWebAssets-HYDROPLANE_340x340.png?v=1762442005" },
+  // ── R+Co Sets ──
+  { id: 60, line: "R+Co", name: "TELEVISION", sub: "Perfect Hair Shampoo + Conditioner Set", cat: "Set", sz: "8.5 oz ea", price: 76, badge: "", img: CDN_P+"R_Co_WebAssets2021_TELEVISION-Wash-Kit_340x340.png?v=1762442048" },
+  { id: 61, line: "R+Co", name: "DALLAS", sub: "Biotin Thickening Shampoo + Conditioner Set", cat: "Set", sz: "8.5 oz ea", price: 76, badge: "", img: CDN_P+"R_Co_WebAssets2021_DALLAS-Wash-Kit_340x340.png?v=1762441932" },
+  // ── R+Co BLEU ──
+  { id: 100, line: "R+Co BLEU", name: "ESSENTIAL", sub: "Essential Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 49, badge: "", img: CDN_F+"ESSENTIAL-Shampoo_340x340.png?v=1762442332" },
+  { id: 101, line: "R+Co BLEU", name: "ESSENTIAL", sub: "Essential Conditioner", cat: "Conditioner", sz: "6.8 oz", price: 49, badge: "", img: CDN_F+"ESSENTIAL-Conditioner_340x340.png?v=1762442326" },
+  { id: 102, line: "R+Co BLEU", name: "DE LUXE", sub: "Reparative Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 52, badge: "", img: CDN_F+"DELUXE-REPARATIVE-Shampoo_340x340.png?v=1762442284" },
+  { id: 103, line: "R+Co BLEU", name: "DE LUXE", sub: "Reparative Conditioner", cat: "Conditioner", sz: "6.8 oz", price: 52, badge: "", img: CDN_F+"DELUXE-REPARATIVE-Conditioner_340x340.png?v=1762442278" },
+  { id: 104, line: "R+Co BLEU", name: "PRIMARY COLOR", sub: "Color Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 49, badge: "", img: CDN_F+"PRIMARY-COLOR-Shampoo_340x340.png?v=1762442400" },
+  { id: 105, line: "R+Co BLEU", name: "PRIMARY COLOR", sub: "Color Conditioner", cat: "Conditioner", sz: "6.8 oz", price: 49, badge: "", img: CDN_F+"PRIMARY-COLOR-Conditioner_340x340.png?v=1762442394" },
+  { id: 106, line: "R+Co BLEU", name: "INGENIOUS", sub: "Thickening Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 49, badge: "", img: CDN_F+"INGENIOUS-Thickening-Shampoo_340x340.png?v=1762442356" },
+  { id: 107, line: "R+Co BLEU", name: "SOFT BOUNCE", sub: "Natural Texture + Curl Shampoo", cat: "Shampoo", sz: "8.5 oz", price: 49, badge: "", img: CDN_F+"SOFT-BOUNCE-Shampoo_340x340.png?v=1762442418" },
+  { id: 108, line: "R+Co BLEU", name: "SOFT BOUNCE", sub: "Natural Texture + Curl Conditioner", cat: "Conditioner", sz: "6.8 oz", price: 59, badge: "", img: CDN_F+"SOFT-BOUNCE-Conditioner_340x340.png?v=1762442412" },
+  { id: 110, line: "R+Co BLEU", name: "SUPER STYLE", sub: "Super Style Crème", cat: "Styling", sz: "5 oz", price: 54, badge: "", img: CDN_F+"SUPER-STYLE-Creme_340x340.png?v=1762442430" },
+  { id: 111, line: "R+Co BLEU", name: "LIFESTYLER", sub: "Volume + Texture Spray", cat: "Styling", sz: "8.5 oz", price: 49, badge: "", img: CDN_F+"LIFESTYLER_340x340.png?v=1762442368" },
+  { id: 112, line: "R+Co BLEU", name: "OPTICAL ILLUSION", sub: "Smoothing Oil", cat: "Styling", sz: "2 oz", price: 59, badge: "", img: CDN_F+"OPTICAL-ILLUSION_340x340.png?v=1762442388" },
+  { id: 113, line: "R+Co BLEU", name: "ULTRA DRY", sub: "Texture Spray", cat: "Styling", sz: "8 oz", price: 49, badge: "", img: CDN_F+"ULTRA-DRY_340x340.png?v=1762442443" },
+  { id: 114, line: "R+Co BLEU", name: "MAGNIFIER", sub: "Thickening Spray", cat: "Styling", sz: "6.5 oz", price: 42, badge: "", img: CDN_F+"MAGNIFIER_340x340.png?v=1762442374" },
+  { id: 115, line: "R+Co BLEU", name: "SMOOTH AND SEAL", sub: "Blow Dry Mist", cat: "Styling", sz: "7 oz", price: 49, badge: "", img: CDN_F+"SMOOTH-AND-SEAL_340x340.png?v=1762442424" },
+  { id: 116, line: "R+Co BLEU", name: "REBOUNCE", sub: "Curl Defining Crème", cat: "Styling", sz: "5 oz", price: 44, badge: "", img: CDN_F+"REBOUNCE_340x340.png?v=1762442400" },
+  { id: 117, line: "R+Co BLEU", name: "SURREAL", sub: "Styling Serum", cat: "Styling", sz: "3.4 oz", price: 58, badge: "", img: CDN_F+"SURREAL_340x340.png?v=1762442436" },
+  { id: 118, line: "R+Co BLEU", name: "AIR DRY BLOW DRY", sub: "Air Dry Blow Dry Crème", cat: "Styling", sz: "5 oz", price: 49, badge: "New", img: CDN_F+"ADBD_Navigation-Tile_v4_524x.jpg?v=1745431252" },
+  { id: 119, line: "R+Co BLEU", name: "ROOT BOOSTER", sub: "Volume Spray", cat: "Styling", sz: "6.5 oz", price: 45, badge: "", img: CDN_F+"ROOT-BOOSTER_340x340.png?v=1762442406" },
+  { id: 120, line: "R+Co BLEU", name: "INGENIOUS", sub: "Thickening Masque", cat: "Treatment", sz: "5.9 oz", price: 62, badge: "", img: CDN_F+"INGENIOUS-Thickening-Masque_340x340.png?v=1762442362" },
+  { id: 121, line: "R+Co BLEU", name: "PRIMARY", sub: "Primary Masque", cat: "Treatment", sz: "5 oz", price: 35, badge: "", img: CDN_F+"PRIMARY-Masque_340x340.png?v=1762442394" },
+  { id: 122, line: "R+Co BLEU", name: "F-LAYER", sub: "Deep Conditioning Serum", cat: "Treatment", sz: "3.4 oz", price: 58, badge: "", img: CDN_F+"F-LAYER_340x340.png?v=1762442338" },
+  { id: 123, line: "R+Co BLEU", name: "SCALP THERAPY", sub: "Pre-Shampoo Exfoliating Scrub", cat: "Treatment", sz: "5 oz", price: 54, badge: "", img: CDN_F+"SCALP-THERAPY-Scrub_340x340.png?v=1762442412" },
+  { id: 124, line: "R+Co BLEU", name: "SCALP THERAPY", sub: "Densifying + Rebalancing Leave-In Mist", cat: "Treatment", sz: "6.5 oz", price: 54, badge: "", img: CDN_F+"SCALP-THERAPY-Mist_340x340.png?v=1762442406" },
+];
+
+export const CATEGORIES = ["All", "Shampoo", "Conditioner", "Styling", "Treatment", "Set"];
+export const LINES = ["All", "R+Co", "R+Co BLEU"];
